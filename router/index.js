@@ -1,6 +1,7 @@
 import {Router} from "express";
 import { body } from "express-validator"
 import { userController } from "../controllers/userController.js";
+import {vacancyController} from "../controllers/VacancyController.js";
 
 const router = new Router();
 
@@ -16,5 +17,8 @@ router.get("/refresh", userController.refresh);
 router.get("/users", userController.getUsers)
 router.put("/userUpdate/:id", userController.updateUser)
 router.get("/getUser/:id", userController.getUser)
+router.post("/createVacancy", vacancyController.createVacancy)
+router.put("/updateVacancy/:id", vacancyController.updateVacancy)
+router.get("/getVacancies", vacancyController.getVacancies)
 
 export default router;

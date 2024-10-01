@@ -5,11 +5,8 @@ const UserSchema = new Schema({
   password: { type: String, required: true },
   isActivated: { type: Boolean, default: false },
   activationLink: { type: String },
-  // createdAt: {type: Date, default: Date.now},
-  // updatedAt: {type: Date},
-   firstName: {type: String},
-   lastName: {type: String},
-  // role: {type: String, enum: ['admin', 'supervisor', 'operator', 'user'], default: 'user'}
+  firstName: {type: String},
+  lastName: {type: String},
 });
 
 export default model("User", UserSchema);
